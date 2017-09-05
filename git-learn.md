@@ -50,10 +50,33 @@
 
 克隆，命令比较简单`clone git@github.com:lofayo/cli.git`
 
-### 创建与合并分支
+### <a name=merge>创建与合并分支</a>
 对分支的理解：就像我们高考做数学大题，先在草稿纸上写出计算过程看看对错，对了话再誊写到答题卡上。分支道理差不多，现在原文件下建立个分支，在那上面想怎么写就怎么写，最后项目写完了，也没有bug了在合并到主分区上
 
 实质理解：有两个指针：`master`，指向主分支； `head`，指向当前活动的分支。当你创建并切换到新分支时，head 指针就指向它，而master 依然指向原分支，这个时候只要合并分支，就将master移到了下一个分支节点上，此时，head和master指向同一个节点。看图解：
+
+<font color=blue><1> 一开始，head 和 master指针都指向分支的最后一个节点</font>
+
+![](https://raw.githubusercontent.com/lofayo/images/master/branch1.png)
+
+<font color=blue><2>创建并切换到了新分支 `git checkout -b dev`，head指针代表当前分支，所有它指向了分支dev</font>
+
+![hello](https://raw.githubusercontent.com/lofayo/images/master/branch2.png)
+
+
+<font color=blue><3>由于在新分支dev下修改了文件，并且也 `git add  git commit`，所有相当于创建了新的节点</font>
+
+![hello](https://raw.githubusercontent.com/lofayo/images/master/branch3.png)
+
+<font color=blue><4>切换到主分支`git checkout master`后，将dev分支内容进行合并`git merge dev`，就是将master指针向后移动一个单位</font>
+
+![hello](https://raw.githubusercontent.com/lofayo/images/master/branch4.png)
+
+<font color=blue><5>最后，删除dev分支。</font>
+
+![hello](https://raw.githubusercontent.com/lofayo/images/master/branch5.png)
+
+<font color=blue size=3>总结：整个过程完整了实现了先创建一个草稿分支，在上面修改内容，修改好了后和主分支合并，最后删除草稿分支（感觉跟我们考试草稿纸演算，最后把答案誊写答卷一样一样的）</font>
 
 
 
@@ -69,4 +92,4 @@
 
 6. `git branch -d name` 分支合并后，就可以删掉分支
 
-**分支合并冲突：**
+**分支合并冲突：**<a href=#merge>zheli</a>

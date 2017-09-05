@@ -76,7 +76,7 @@
 
 ![hello](https://raw.githubusercontent.com/lofayo/images/master/branch5.png)
 
-<font color=blue size=3>总结：整个过程完整了实现了先创建一个草稿分支，在上面修改内容，修改好了后和主分支合并，最后删除草稿分支（感觉跟我们考试草稿纸演算，最后把答案誊写答卷一样一样的）</font>
+<font color=blue size=3>**总结：**整个过程完整了实现了先创建一个草稿分支，在上面修改内容，修改好了后和主分支合并，最后删除草稿分支（感觉跟我们考试草稿纸演算，最后把答案誊写答卷一样一样的）</font>
 
 
 
@@ -92,4 +92,10 @@
 
 6. `git branch -d name` 分支合并后，就可以删掉分支
 
-**分支合并冲突：**<a href=#merge>zheli</a>
+**分支合并冲突：**要想弄清楚合并冲突，先得理解<a href=#merge>正常合并</a>，理解了正常合并，你就会感觉到合并冲突是一种异常，详细理解过程那就看图加解释：
+
+<1>和上面创建分支一样，先创建一个分支，并对工作区文件修改并提交；**可这时候**，切换到主分支，也对文件修改提交（head 指针和 master指针往后移动一个单位）；这时，在主分支下合并分支就会冲突
+
+![](https://raw.githubusercontent.com/lofayo/images/master/branch6.png)
+
+![](https://raw.githubusercontent.com/lofayo/images/master/branch7.png)

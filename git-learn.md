@@ -98,4 +98,8 @@
 
 ![](https://raw.githubusercontent.com/lofayo/images/master/branch6.png)
 
+<2>合并冲突了的处理方案就是，将新分支的内容也添加，最后当前指针移动到下一个新节点上
+
 ![](https://raw.githubusercontent.com/lofayo/images/master/branch7.png)
+
+*注：以上内容纯属个人笔记，里面也没有多少理解的故事，只是个人笔记做个备忘，如果想学完整课程还请移步[廖雪峰老师教程官网](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137628548491051ccfaef0ccb470894c858999603fedf000)*
